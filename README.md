@@ -1,7 +1,7 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=DE75F7&width=1000&lines=Hai+%F0%9F%91%8B++kamu+sekarang+berhasil+menemukan+repository+portofolio+saya.;Kalo+kamu+mau+lihat+portofolio+saya+silahkan+cek+di+link+davevady.github.io)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=DE75F7&width=1000&lines=Hai+%F0%9F%91%8B++kamu+sekarang+berhasil+menemukan+repository+portofolio+saya.;Kalo+kamu+mau+lihat+portofolio+saya+silahkan+cek+di+link+di+bawah+ini)](https://git.io/typing-svg)
 
 
-<h3 align="center">Fullstack Developer yang Bersemangat dari Indonesia</h3>
+<h3 align="center">Cek <a href="davevady.github.io">di sini</a></h3>
 <img align="right" alt="coding" width="400" src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif">
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=davevady&label=Profile%20views&color=0e75b6&style=flat" alt="davevady" /> </p>
