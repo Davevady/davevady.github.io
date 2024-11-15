@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=DE75F7&width=435&lines=Hai%2C+selamat+datang!;Lihat+portofolio+saya+di+davevady.github.io)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=DE75F7&width=600&lines=Hai%2C+selamat+datang!;Lihat+portofolio+saya+di+davevady.github.io)](https://git.io/typing-svg)
 
 <h3 align="center">Fullstack Developer yang Bersemangat dari Indonesia</h3>
 <img align="right" alt="coding" width="400" src="https://cdn.dribbble.com/users/720825/screenshots/3253310/slim-jim-_dribbble_-_800x600_.gif">
