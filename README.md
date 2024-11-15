@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=DE75F7&width=1000&lines=Hai%2C+kamu+sekarang+berhasil+menemukan+repository+portofolio+saya.;Kalo+kamu+mau+lihat+portofolio+saya+silahkan+cek+di+link+davevady.github.io)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=DE75F7&width=1000&lines=Hai+%F0%9F%91%8B++kamu+sekarang+berhasil+menemukan+repository+portofolio+saya.;Kalo+kamu+mau+lihat+portofolio+saya+silahkan+cek+di+link+davevady.github.io)](https://git.io/typing-svg)
 
 
 <h3 align="center">Fullstack Developer yang Bersemangat dari Indonesia</h3>
