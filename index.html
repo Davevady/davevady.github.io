@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Ervardy - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                David Ervardy
+                <!-- Optional: tambahkan icon -->
+                <i class="fas fa-code"></i>
+            </a>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <button class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <div class="hero-profile">
+                <img src="image/profile-image.jpg" alt="David Ervardy" class="profile-img">
+                <div class="profile-info">
+                    <h1>David Ervardy Silitonga</h1>
+                    <h2 class="typewriter">Web Developer & Multimedia Specialist</h2>
+                    <p class="tagline">Mengubah ide menjadi solusi digital yang inovatif</p>
+                    <div class="hero-cta">
+                        <a href="#portfolio" class="btn btn-primary">Lihat Portfolio</a>
+                        <a href="#kontak" class="btn btn-outline">Hubungi Saya</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Tahun Pengalaman</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Project Selesai</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Teknologi Dikuasai</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-social">
+                <a href="https://linkedin.com/in/david-ervardy" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Davervardy" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:davidervardy98@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="about">
+        <div class="section-content">
+            <h2>Tentang Saya</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Saya tertarik dengan dunia teknologi sejak duduk di bangku Sekolah Menengah Pertama. Saya terus mengembangkan kemampuan saya hingga saya melanjutkan Sekolah Menengah Kejuruan jurusan Rekayasa Perangkat Lunak hingga perkuliahan jurusan Teknik Informatika di Politeknik Negeri Indramayu.
+                    </p>
+                    
+                    <div class="about-details">
+                        <div class="about-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Pendidikan</h3>
+                            <ul>
+                                <li>
+                                    <span class="year">2021 - 2024</span>
+                                    <span class="institution">Politeknik Negeri Indramayu</span>
+                                    <span class="degree">D3 Teknik Informatika</span>
+                                </li>
+                                <li>
+                                    <span class="year">2017 - 2020</span>
+                                    <span class="institution">SMK Texar Karawang</span>
+                                    <span class="degree">Rekayasa Perangkat Lunak</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="about-card">
+                            <i class="fas fa-briefcase"></i>
+                            <h3>Pengalaman</h3>
+                            <ul>
+                                <li>
+                                    <span class="year">Januari - Agustus 2024</span>
+                                    <span class="position">Mobile Developer AR</span>
+                                    <span class="company">Politeknik Negeri Indramayu</span>
+                                </li>
+                                <li>
+                                    <span class="year">Juli - Desember 2023</span>
+                                    <span class="position">Web Developer</span>
+                                    <span class="company">PT Integrasia Utama</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="about-interests">
+                        <h3>Minat & Fokus</h3>
+                        <div class="interest-tags">
+                            <span>Web Development</span>
+                            <span>Mobile Development</span>
+                            <span>UI/UX Design</span>
+                            <span>Augmented Reality</span>
+                            <span>Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skill" class="skills">
+        <div class="section-content">
+            <h2>Keahlian</h2>
+            
+            <!-- Tambahkan div filter -->
+            <div class="skill-filter">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="advanced">Advanced</button>
+                <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+                <button class="filter-btn" data-filter="beginner">Beginner</button>
+            </div>
+
+            <div class="skill-container">
+                <!-- Pembuatan Aplikasi -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Pembuatan Aplikasi</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <div class="skill-info">
+                                <div class="skill-name-wrapper">
+                                    <span class="skill-name">VS Code</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-details">
+                                    <span>Code Editor Utama</span>
+                                    <span>Web Development</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <div class="skill-info">
+                                <div class="skill-name-wrapper">
+                                    <span class="skill-name">XAMPP</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-details">
+                                    <span>Local Development Server</span>
+                                    <span>Database Management</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-cube"></i>
+                            <div class="skill-info">
+                                <div class="skill-name-wrapper">
+                                    <span class="skill-name">Blender</span>
+                                    <span class="skill-level">Beginner</span>
+                                </div>
+                                <div class="skill-details">
+                                    <span>3D Modeling</span>
+                                    <span>Asset Creation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-gamepad"></i>
+                            <div class="skill-info">
+                                <div class="skill-name-wrapper">
+                                    <span class="skill-name">Unity</span>
+                                    <span class="skill-level">Beginner</span>
+                                </div>
+                                <div class="skill-details">
+                                    <span>Game Development</span>
+                                    <span>AR Development</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <div class="skill-info">
+                                <div class="skill-name-wrapper">
+                                    <span class="skill-name">Figma</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-details">
+                                    <span>UI/UX Design</span>
+                                    <span>Prototyping</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-file-word"></i>
+                            <div class="skill-info">
+                                <div class="skill-name-wrapper">
+                                    <span class="skill-name">Ms Office</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-details">
+                                    <span>Document Processing</span>
+                                    <span>Data Management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desain Grafis -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-palette"></i>
+                        <h3>Desain Grafis</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-image"></i>
+                            <div class="skill-info">
+                                <div class="skill-name-wrapper">
+                                    <span class="skill-name">Photoshop</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-details">
+                                    <span>Photo Editing</span>
+                                    <span>Digital Imaging</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-bezier-curve"></i>
+                            <div class="skill-info">
+                                <div class="skill-name-wrapper">
+                                    <span class="skill-name">Adobe Illustrator</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-details">
+                                    <span>Vector Graphics</span>
+                                    <span>Logo Design</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <div class="skill-info">
+                                <div class="skill-name-wrapper">
+                                    <span class="skill-name">Canva</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-details">
+                                    <span>Social Media Design</span>
+                                    <span>Presentation Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Grafis -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-video"></i>
+                        <h3>Video Grafis</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-film"></i>
+                            <div class="skill-info">
+                                <div class="skill-name-wrapper">
+                                    <span class="skill-name">Premiere Pro</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-details">
+                                    <span>Video Editing</span>
+                                    <span>Content Creation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-magic"></i>
+                            <div class="skill-info">
+                                <div class="skill-name-wrapper">
+                                    <span class="skill-name">After Effect</span>
+                                    <span class="skill-level">Beginner</span>
+                                </div>
+                                <div class="skill-details">
+                                    <span>Motion Graphics</span>
+                                    <span>Visual Effects</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-cut"></i>
+                            <div class="skill-info">
+                                <div class="skill-name-wrapper">
+                                    <span class="skill-name">Capcut</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-details">
+                                    <span>Quick Video Editing</span>
+                                    <span>Social Media Content</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="section-content">
+            <h2>Portfolio</h2>
+            
+            <div class="portfolio-container">
+                <!-- Project 1 - Mobile AR -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Mobile Developer AR</h3>
+                        <div class="project-badges">
+                            <span class="badge">Mobile App</span>
+                            <span class="badge">AR</span>
+                        </div>
+                    </div>
+
+                    <!-- Thumbnail image yang bisa diklik -->
+                    <div class="project-thumbnail" onclick="openModal(this)" data-project="ar-project">
+                        <img src="image/project/AR-1.jpg" alt="AR Project">
+                        <div class="thumbnail-overlay">
+                            <i class="fas fa-expand"></i>
+                            <span>Lihat Detail</span>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <p class="project-description">
+                            Aplikasi Augmented Reality untuk Cerdik-AR di Politeknik Negeri Indramayu
+                        </p>
+                        <div class="project-meta">
+                            <span class="meta-date">
+                                <i class="fas fa-calendar"></i>
+                                2024
+                            </span>
+                            <div class="tech-tags">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>AR</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 - Website -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Website Developer PT Integrasia</h3>
+                        <div class="project-badges">
+                            <span class="badge">Web App</span>
+                            <span class="badge">Enterprise</span>
+                        </div>
+                    </div>
+
+                    <!-- Thumbnail image yang bisa diklik -->
+                    <div class="project-thumbnail" onclick="openModal(this)" data-project="web-kluarga">
+                        <img src="image/project/Kluarga - 1.png" alt="Web Project">
+                        <div class="thumbnail-overlay">
+                            <i class="fas fa-expand"></i>
+                            <span>Lihat Detail</span>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <p class="project-description">
+                            Aplikasi Website untuk PT Integrasia
+                        </p>
+                        <div class="project-meta">
+                            <span class="meta-date">
+                                <i class="fas fa-calendar"></i>
+                                2023
+                            </span>
+                            <div class="tech-tags">
+                                <span>Laravel</span>
+                                <span>Tailwind CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 - Website -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Web Developer Payment Gateway</h3>
+                        <div class="project-badges">
+                            <span class="badge">Web App</span>
+                            <span class="badge">Enterprise</span>
+                        </div>
+                    </div>
+
+                    <!-- Thumbnail image yang bisa diklik -->
+                    <div class="project-thumbnail" onclick="openModal(this)" data-project="web-project">
+                        <img src="image/project/Payment - 1.png" alt="Web Project">
+                        <div class="thumbnail-overlay">
+                            <i class="fas fa-expand"></i>
+                            <span>Lihat Detail</span>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <p class="project-description">
+                            Aplikasi Website untuk Payment Gateway
+                        </p>
+                        <div class="project-meta">
+                            <span class="meta-date">
+                                <i class="fas fa-calendar"></i>
+                                2023
+                            </span>
+                            <div class="tech-tags">
+                                <span>Laravel</span>
+                                <span>Bootstrap</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Popup -->
+        <div id="projectModal1" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3 class="modal-title">Mobile Developer AR</h3>
+                
+                <div class="modal-gallery">
+                    <div class="gallery-main">
+                        <img src="image/project/AR-1.jpg" alt="AR Project 1" id="mainImage">
+                        <button class="gallery-nav prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="gallery-thumbs">
+                        <img src="image/project/AR-1.jpg" alt="AR Project 1" class="active">
+                        <img src="image/project/AR-3.jpg" alt="AR Project 2">
+                        <img src="image/project/AR-4.jpg" alt="AR Project 3">
+                    </div>
+                </div>
+                
+                <div class="modal-details">
+                    <h4>Deskripsi Project</h4>
+                    <p>Aplikasi Augmented Reality untuk pembelajaran interaktif di Politeknik Negeri Indramayu...</p>
+                    
+                    <div class="project-specs">
+                        <div class="spec-item">
+                            <h5>Teknologi</h5>
+                            <div class="tech-tags">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>AR Foundation</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <h5>Periode</h5>
+                            <p>Februari - Juli 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="projectModal2" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3 class="modal-title">Web Developer PT Integrasia</h3>
+                
+                <div class="modal-gallery">
+                    <div class="gallery-main">
+                        <img src="image/project/Kluarga - 1.png" alt="Web Project 1" id="mainImage">
+                        <button class="gallery-nav prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="gallery-thumbs">
+                        <img src="image/project/Kluarga - 1.png" alt="Web Project 1" class="active">
+                        <img src="image/project/Kluarga - 2.png" alt="Web Project 2">
+                        <img src="image/project/Kluarga - 3.png" alt="Web Project 3">
+                    </div>
+                </div>
+                
+                <div class="modal-details">
+                    <h4>Deskripsi Project</h4>
+                    <p>Aplikasi Website untuk PT Integrasia</p>
+                    
+                    <div class="project-specs">
+                        <div class="spec-item">
+                            <h5>Teknologi</h5>
+                            <div class="tech-tags">
+                                <span>Laravel</span>
+                                <span>Tailwind CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <h5>Periode</h5>
+                            <p>2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="projectModal3" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3 class="modal-title">Web Developer Payment Gateway</h3>
+                
+                <div class="modal-gallery">
+                    <div class="gallery-main">
+                        <img src="image/project/Payment - 1.png" alt="Web Project 1" id="mainImage">
+                        <button class="gallery-nav prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="gallery-nav next">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="gallery-thumbs">
+                        <img src="image/project/Payment - 1.png" alt="Web Project 1" class="active">
+                        <img src="image/project/Payment - 2.png" alt="Web Project 2">
+                        <img src="image/project/Payment - 3.png" alt="Web Project 3">
+                    </div>
+                </div>
+                
+                <div class="modal-details">
+                    <h4>Deskripsi Project</h4>
+                    <p>Aplikasi Website untuk Payment Gateway</p>
+                    
+                    <div class="project-specs">
+                        <div class="spec-item">
+                            <h5>Teknologi</h5>
+                            <div class="tech-tags">
+                                <span>Laravel</span>
+                                <span>Bootstrap</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <h5>Periode</h5>
+                            <p>2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="contact">
+        <h2>Kontak</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> +62 8653 5307 6420</p>
+            <p><i class="fas fa-envelope"></i> davidervardy98@gmail.com</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/david-ervardy"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Davervardy"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 David Ervardy. All rights reserved.</p>
+    </footer>
+
+    <!-- Letakkan script di sini, tepat sebelum closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const sliders = document.querySelectorAll('.slides');
+        const currentSlide = new Array(sliders.length).fill(0);
+
+        function showSlide(sliderIndex) {
+            const slides = sliders[sliderIndex].querySelectorAll('img');
+            const slideWidth = 100 / slides.length;
+            sliders[sliderIndex].style.transform = `translateX(-${currentSlide[sliderIndex] * slideWidth}%)`;
+        }
+
+        function nextSlide(sliderIndex) {
+            const slides = sliders[sliderIndex].querySelectorAll('img');
+            currentSlide[sliderIndex] = (currentSlide[sliderIndex] + 1) % slides.length;
+            showSlide(sliderIndex);
+        }
+
+        function prevSlide(sliderIndex) {
+            const slides = sliders[sliderIndex].querySelectorAll('img');
+            currentSlide[sliderIndex] = (currentSlide[sliderIndex] - 1 + slides.length) % slides.length;
+            showSlide(sliderIndex);
+        }
+
+        // Inisialisasi slider
+        sliders.forEach((slider, index) => {
+            showSlide(index);
+            setInterval(() => nextSlide(index), 3000);
+        });
+
+        // Scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        const menuBtn = document.querySelector('.menu-btn');
+        const navMenu = document.querySelector('nav ul');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('nav')) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const skillItems = document.querySelectorAll('.skill-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    skillItems.forEach(item => {
+                        const skillLevel = item.querySelector('.skill-level').textContent.toLowerCase();
+                        
+                        if (filterValue === 'all' || skillLevel === filterValue) {
+                            item.classList.remove('hidden');
+                            item.classList.add('show');
+                        } else {
+                            item.classList.add('hidden');
+                            item.classList.remove('show');
+                        }
+                    });
+                });
+            });
+        });
+
+        // Slider functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliders = document.querySelectorAll('.slider');
+            
+            sliders.forEach(slider => {
+                const slides = slider.querySelector('.slides');
+                const prevBtn = slider.querySelector('.prev');
+                const nextBtn = slider.querySelector('.next');
+                let currentSlide = 0;
+                
+                function updateSlide() {
+                    const slideWidth = slider.offsetWidth;
+                    slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+                }
+                
+                prevBtn.addEventListener('click', () => {
+                    const totalSlides = slides.children.length;
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    updateSlide();
+                });
+                
+                nextBtn.addEventListener('click', () => {
+                    const totalSlides = slides.children.length;
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    updateSlide();
+                });
+                
+                // Auto slide
+                setInterval(() => {
+                    const totalSlides = slides.children.length;
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    updateSlide();
+                }, 5000);
+            });
+        });
+
+        // Update fungsi openModal untuk menangani multiple modal
+        function openModal(element) {
+            // Dapatkan project ID dari data attribute
+            const projectId = element.getAttribute('data-project');
+            let modalId;
+            
+            // Tentukan modal yang sesuai berdasarkan project
+            switch(projectId) {
+                case 'ar-project':
+                    modalId = 'projectModal1';
+                    break;
+                case 'web-kluarga':
+                    modalId = 'projectModal2';
+                    break;
+                case 'web-project':
+                    modalId = 'projectModal3';
+                    break;
+                default:
+                    modalId = 'projectModal1';
+            }
+            
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            
+            // Initialize gallery untuk modal yang aktif
+            initGallery(modalId);
+        }
+
+        // Update fungsi closeModal untuk menangani multiple modal
+        function closeModal() {
+            // Tutup semua modal
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                modal.style.display = 'none';
+            });
+            document.body.style.overflow = 'auto';
+        }
+
+        // Update fungsi initGallery untuk menangani multiple modal
+        function initGallery(modalId) {
+            const modal = document.getElementById(modalId);
+            const mainImage = modal.querySelector('.gallery-main img');
+            const thumbs = modal.querySelectorAll('.gallery-thumbs img');
+            const prevBtn = modal.querySelector('.gallery-nav.prev');
+            const nextBtn = modal.querySelector('.gallery-nav.next');
+            let currentIndex = 0;
+
+            // Thumbnail click
+            thumbs.forEach((thumb, index) => {
+                thumb.onclick = () => {
+                    mainImage.src = thumb.src;
+                    thumbs.forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
+                    currentIndex = index;
+                };
+            });
+
+            // Navigation
+            prevBtn.onclick = () => {
+                currentIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+                thumbs[currentIndex].click();
+            };
+
+            nextBtn.onclick = () => {
+                currentIndex = (currentIndex + 1) % thumbs.length;
+                thumbs[currentIndex].click();
+            };
+        }
+
+        // Event listeners untuk close buttons
+        document.querySelectorAll('.close-modal').forEach(btn => {
+            btn.onclick = closeModal;
+        });
+
+        // Close modal when clicking outside
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                closeModal();
+            }
+        });
+
+        // Close modal with escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
