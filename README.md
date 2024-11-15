@@ -2,7 +2,7 @@
 
 
 <h3 align="center">Fullstack Developer yang Bersemangat dari Indonesia</h3>
-<img align="right" alt="coding" width="400" src="https://cdn.dribbble.com/users/720825/screenshots/3253310/slim-jim-_dribbble_-_800x600_.gif">
+<img align="right" alt="coding" width="400" src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif">
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=davevady&label=Profile%20views&color=0e75b6&style=flat" alt="davevady" /> </p>
 
