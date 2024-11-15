@@ -1,4 +1,4 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=DE75F7&width=1000&lines=Hai+%F0%9F%91%8B++kamu+sekarang+berhasil+menemukan+repository+portofolio+saya.;Kalo+kamu+mau+lihat+portofolio+saya+silahkan+cek+di+link+di+bawah+ini)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=DE75F7&width=1000&lines=Hai+%F0%9F%91%8B++kamu+sekarang+berada+di+repository+portofolio+saya.;Kalo+anda+ingin+melihat+portofolio+saya,+silahkan+cek+di+link+di+bawah+ini)](https://git.io/typing-svg)
 
 
 <h3 align="center">Cek <a href="https://davevady.github.io">di sini</a></h3>
