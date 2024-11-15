@@ -149,7 +149,7 @@
                         <h3>Pembuatan Aplikasi</h3>
                     </div>
                     <div class="skill-items">
-                        <div class="skill-item">
+                        <div class="skill-item" data-level="advanced">
                             <i class="fas fa-code"></i>
                             <div class="skill-info">
                                 <div class="skill-name-wrapper">
@@ -163,7 +163,7 @@
                             </div>
                         </div>
 
-                        <div class="skill-item">
+                        <div class="skill-item" data-level="intermediate">
                             <i class="fas fa-server"></i>
                             <div class="skill-info">
                                 <div class="skill-name-wrapper">
@@ -177,7 +177,7 @@
                             </div>
                         </div>
 
-                        <div class="skill-item">
+                        <div class="skill-item" data-level="beginner">
                             <i class="fas fa-cube"></i>
                             <div class="skill-info">
                                 <div class="skill-name-wrapper">
@@ -191,7 +191,7 @@
                             </div>
                         </div>
 
-                        <div class="skill-item">
+                        <div class="skill-item" data-level="beginner">
                             <i class="fas fa-gamepad"></i>
                             <div class="skill-info">
                                 <div class="skill-name-wrapper">
@@ -205,7 +205,7 @@
                             </div>
                         </div>
 
-                        <div class="skill-item">
+                        <div class="skill-item" data-level="intermediate">
                             <i class="fas fa-pencil-ruler"></i>
                             <div class="skill-info">
                                 <div class="skill-name-wrapper">
@@ -219,7 +219,7 @@
                             </div>
                         </div>
 
-                        <div class="skill-item">
+                        <div class="skill-item" data-level="advanced">
                             <i class="fas fa-file-word"></i>
                             <div class="skill-info">
                                 <div class="skill-name-wrapper">
@@ -242,7 +242,7 @@
                         <h3>Desain Grafis</h3>
                     </div>
                     <div class="skill-items">
-                        <div class="skill-item">
+                        <div class="skill-item" data-level="intermediate">
                             <i class="fas fa-image"></i>
                             <div class="skill-info">
                                 <div class="skill-name-wrapper">
@@ -256,7 +256,7 @@
                             </div>
                         </div>
 
-                        <div class="skill-item">
+                        <div class="skill-item" data-level="intermediate">
                             <i class="fas fa-bezier-curve"></i>
                             <div class="skill-info">
                                 <div class="skill-name-wrapper">
@@ -270,7 +270,7 @@
                             </div>
                         </div>
 
-                        <div class="skill-item">
+                        <div class="skill-item" data-level="advanced">
                             <i class="fas fa-paint-brush"></i>
                             <div class="skill-info">
                                 <div class="skill-name-wrapper">
@@ -293,7 +293,7 @@
                         <h3>Video Grafis</h3>
                     </div>
                     <div class="skill-items">
-                        <div class="skill-item">
+                        <div class="skill-item" data-level="intermediate">
                             <i class="fas fa-film"></i>
                             <div class="skill-info">
                                 <div class="skill-name-wrapper">
@@ -307,7 +307,7 @@
                             </div>
                         </div>
 
-                        <div class="skill-item">
+                        <div class="skill-item" data-level="beginner">
                             <i class="fas fa-magic"></i>
                             <div class="skill-info">
                                 <div class="skill-name-wrapper">
@@ -321,7 +321,7 @@
                             </div>
                         </div>
 
-                        <div class="skill-item">
+                        <div class="skill-item" data-level="advanced">
                             <i class="fas fa-cut"></i>
                             <div class="skill-info">
                                 <div class="skill-name-wrapper">
@@ -611,37 +611,10 @@
     <!-- Letakkan script di sini, tepat sebelum closing body tag -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const sliders = document.querySelectorAll('.slides');
-        const currentSlide = new Array(sliders.length).fill(0);
-
-        function showSlide(sliderIndex) {
-            const slides = sliders[sliderIndex].querySelectorAll('img');
-            const slideWidth = 100 / slides.length;
-            sliders[sliderIndex].style.transform = `translateX(-${currentSlide[sliderIndex] * slideWidth}%)`;
-        }
-
-        function nextSlide(sliderIndex) {
-            const slides = sliders[sliderIndex].querySelectorAll('img');
-            currentSlide[sliderIndex] = (currentSlide[sliderIndex] + 1) % slides.length;
-            showSlide(sliderIndex);
-        }
-
-        function prevSlide(sliderIndex) {
-            const slides = sliders[sliderIndex].querySelectorAll('img');
-            currentSlide[sliderIndex] = (currentSlide[sliderIndex] - 1 + slides.length) % slides.length;
-            showSlide(sliderIndex);
-        }
-
-        // Inisialisasi slider
-        sliders.forEach((slider, index) => {
-            showSlide(index);
-            setInterval(() => nextSlide(index), 3000);
-        });
-
-        // Scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
@@ -663,34 +636,6 @@
             }
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const skillItems = document.querySelectorAll('.skill-item');
-
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    // Add active class to clicked button
-                    button.classList.add('active');
-
-                    const filterValue = button.getAttribute('data-filter');
-
-                    skillItems.forEach(item => {
-                        const skillLevel = item.querySelector('.skill-level').textContent.toLowerCase();
-                        
-                        if (filterValue === 'all' || skillLevel === filterValue) {
-                            item.classList.remove('hidden');
-                            item.classList.add('show');
-                        } else {
-                            item.classList.add('hidden');
-                            item.classList.remove('show');
-                        }
-                    });
-                });
-            });
-        });
-
         // Slider functionality
         document.addEventListener('DOMContentLoaded', function() {
             const sliders = document.querySelectorAll('.slider');
@@ -706,13 +651,13 @@
                     slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
                 }
                 
-                prevBtn.addEventListener('click', () => {
+                prevBtn?.addEventListener('click', () => {
                     const totalSlides = slides.children.length;
                     currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
                     updateSlide();
                 });
                 
-                nextBtn.addEventListener('click', () => {
+                nextBtn?.addEventListener('click', () => {
                     const totalSlides = slides.children.length;
                     currentSlide = (currentSlide + 1) % totalSlides;
                     updateSlide();
@@ -727,46 +672,23 @@
             });
         });
 
-        // Update fungsi openModal untuk menangani multiple modal
+        // Modal functionality
         function openModal(element) {
-            // Dapatkan project ID dari data attribute
             const projectId = element.getAttribute('data-project');
-            let modalId;
-            
-            // Tentukan modal yang sesuai berdasarkan project
-            switch(projectId) {
-                case 'ar-project':
-                    modalId = 'projectModal1';
-                    break;
-                case 'web-kluarga':
-                    modalId = 'projectModal2';
-                    break;
-                case 'web-project':
-                    modalId = 'projectModal3';
-                    break;
-                default:
-                    modalId = 'projectModal1';
-            }
-            
+            const modalId = `projectModal${projectId.charAt(projectId.length - 1)}`;
             const modal = document.getElementById(modalId);
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
-            
-            // Initialize gallery untuk modal yang aktif
             initGallery(modalId);
         }
 
-        // Update fungsi closeModal untuk menangani multiple modal
         function closeModal() {
-            // Tutup semua modal
-            const modals = document.querySelectorAll('.modal');
-            modals.forEach(modal => {
+            document.querySelectorAll('.modal').forEach(modal => {
                 modal.style.display = 'none';
             });
             document.body.style.overflow = 'auto';
         }
 
-        // Update fungsi initGallery untuk menangani multiple modal
         function initGallery(modalId) {
             const modal = document.getElementById(modalId);
             const mainImage = modal.querySelector('.gallery-main img');
@@ -775,7 +697,6 @@
             const nextBtn = modal.querySelector('.gallery-nav.next');
             let currentIndex = 0;
 
-            // Thumbnail click
             thumbs.forEach((thumb, index) => {
                 thumb.onclick = () => {
                     mainImage.src = thumb.src;
@@ -785,7 +706,6 @@
                 };
             });
 
-            // Navigation
             prevBtn.onclick = () => {
                 currentIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
                 thumbs[currentIndex].click();
@@ -797,23 +717,49 @@
             };
         }
 
-        // Event listeners untuk close buttons
+        // Modal event listeners
         document.querySelectorAll('.close-modal').forEach(btn => {
             btn.onclick = closeModal;
         });
 
-        // Close modal when clicking outside
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('modal')) {
                 closeModal();
             }
         });
 
-        // Close modal with escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeModal();
             }
+        });
+
+        // Skill Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const skillItems = document.querySelectorAll('.skill-item');
+
+            filterButtons.forEach(button => {
+                button.style.cursor = 'pointer';
+                
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    skillItems.forEach(item => {
+                        if (filterValue === 'all') {
+                            item.style.display = 'flex';
+                        } else {
+                            const itemLevel = item.getAttribute('data-level');
+                            item.style.display = filterValue === itemLevel ? 'flex' : 'none';
+                        }
+                    });
+                });
+            });
         });
     </script>
 </body>
